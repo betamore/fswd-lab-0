@@ -29,7 +29,7 @@
 
   Other good text editors include:
   * [Visual Studio Code](https://code.visualstudio.com): `brew cask install visual-studio-code`
-  * [Sublime Text](https://www.sublimetext.com)
+  * [Sublime Text](https://www.sublimetext.com): `brew cask install sublime-text`
   * [Brackets](http://brackets.io): `brew cask install brackets`
 
 1. Install [nvm](https://github.com/creationix/nvm): `brew install nvm`
