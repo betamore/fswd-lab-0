@@ -25,11 +25,11 @@
 1. Install [Homebrew Cask](https://caskroom.github.io)
 1. Run `brew update`
 
-# Others
+## Other Prep Steps
 
 1. Sign up for a [GitHub](http://www.github.com/) account if you do not already have one
 
-## Recommended
+## Recommended Software
 1. Install [Atom][atom]: `brew cask install atom`
 
   Other good text editors include:
