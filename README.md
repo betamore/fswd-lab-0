@@ -25,6 +25,10 @@
 1. Install [Homebrew Cask](https://caskroom.github.io)
 1. Run `brew update`
 
+# Others
+
+1. Sign up for a [GitHub](http://www.github.com/) account if you do not already have one
+
 ## Recommended
 1. Install [Atom][atom]: `brew cask install atom`
 
