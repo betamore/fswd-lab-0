@@ -17,13 +17,14 @@
 # Computer Setup
 
 ## Initial
-1. Install [Xcode](https://developer.apple.com/xcode/) (from the Mac App Store)
-
-  Specifically, you only need to install the command line tools. Run `xcode-select --install` on the command line to install them without the full Xcode installation.
-
 1. Install [Homebrew][homebrew]
 1. Install [Homebrew Cask](https://caskroom.github.io)
 1. Run `brew update`
+
+You may need to install [Xcode](https://developer.apple.com/xcode/) (from the Mac App Store)
+
+Specifically, you only need to install the command line tools. Run `xcode-select --install` on the command line to install them without the full Xcode installation.
+
 
 ## Other Prep Steps
 
