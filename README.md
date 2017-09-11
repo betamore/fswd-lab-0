@@ -53,6 +53,9 @@ export NVM_DIR="$HOME/.nvm"
 export LSCOLORS=exfxcxdxbxegedabagacad
 
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+# Use atom for git operations, among other things
+export EDITOR="atom -w"
 ```
 
 ## Other Prep Steps
