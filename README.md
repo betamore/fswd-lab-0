@@ -3,7 +3,7 @@
 ## Initial
 1. Install [Homebrew][homebrew]
 1. Install [Homebrew Cask][cask]
-1. Run `brew update`
+1. Run `brew update` in the `Terminal` application
 
 You will need to install [Xcode](https://developer.apple.com/xcode/) (from the Mac App Store)
 if you have not already. Specifically, you only need to install the command line
