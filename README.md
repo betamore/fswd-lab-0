@@ -1,26 +1,31 @@
 # Computer Setup
 
-## Initial Tool Setup
-1. Install [Homebrew][homebrew]
-1. Install [Homebrew Cask][cask]
-1. Run `brew update` in the `Terminal` application
 
-You will need to install [Xcode](https://developer.apple.com/xcode/) (from the Mac App Store) if you have not already. Specifically, you only need to install the command line tools. Run `xcode-select --install` on the command line to install them without the full Xcode installation. The [Homebrew][homebrew] installation should prompt you to do so if necessary.
+## Initial Tool Setup
+
+1.  Install [Homebrew](http://brew.sh)
+2.  Install [Homebrew Cask](http://cashroom.github.io)
+3.  Run `brew update` in the `Terminal` application.
+
+Homebrew should prompt you to install the Xcode Command Line Tools. You should be able to install them by running the command `xcode-select --install`
+
 
 ## Recommended Software
-1. Install [Visual Studio Code](https://code.visualstudio.com): `brew cask install visual-studio-code`
 
-   Other good text editors include:
+1.  Install [Visual Studio Code](https://code.visualstudio.com): `brew cask install visual-studio-code`
+    
+    Other good text editors include:
+    
+    -   [Atom](http://atom.io): `brew cask install atom`
+    -   [Sublime Text](https://www.sublimetext.com): `brew cask install sublime-text`
+    -   [Brackets](http://brackets.io): `brew cask install brackets`
 
-   * [Atom][atom]: `brew cask install atom`
-   * [Sublime Text](https://www.sublimetext.com): `brew cask install sublime-text`
-   * [Brackets](http://brackets.io): `brew cask install brackets`
+2.  Install [nvm](https://github.com/creationix/nvm): `brew install nvm`
 
-1. Install [nvm](https://github.com/creationix/nvm): `brew install nvm`
 
 ## Terminal and Shell Configuration
 
-The default `Terminal` configuration (specifically, the setup for the "shell" tool that runs inside the window) can be terse. Adding the following lines to a file named `.bashrc` in your home directory (`/Users/<your username>/`) will help.
+The default `Terminal` configuration (specifically, the setup for the "shell" tool that runs inside the eindow) can be terse. Adding the following lines to a file named `.bashrc` in your home directory (sometimes you'll see it as `$HOME` or `~`, it means `/Users/<your username>/`) will help.
 
 ```bash
 # Look for programs to run in the normal spots as well as /usr/local/bin
@@ -57,7 +62,7 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 export EDITOR="code -w"
 ```
 
-This file is not automatically read by the shell program in `Terminal` (even though the `.*rc` filename is a standard one), so you will also need to create/edit a file named `.bash_profile':
+This file is not automatically read by the shell program in `Terminal` (even though the `.*rc` filename template is a standard one), so you will also need to create/edit a file named `.bash_profile`.
 
 ```bash
 if [ -r ~/.bashrc ]; then
@@ -65,24 +70,22 @@ if [ -r ~/.bashrc ]; then
 fi
 ```
 
+
 ## Other Prep Steps
 
-1. Sign up for a [GitHub][github] account if you do not already have one
+1.  Sign up for a [GitHub](http://github.com) account if you do not already have one
 
-# Links
 
-* Development Tools:
-  * [Homebrew][homebrew]
-  * [Visual Studio Code documentation](https://code.visualstudio.com/docs)
-  * [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac)
-  * [Pro Git](https://git-scm.com/book/en/v2)
-* JavaScript:
-  * [Eloquent JavaScript](http://eloquentjavascript.net)
+# Links and Further Reading
+
+-   Development Tools:
+    -   [Homebrew](http://brew.sh)
+    -   [Visual Studio Code documentation](https://code.visualstudio.com/docs)
+    -   [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac)
+    -   [Pro Git](https://git-scm.com/book/en/v2)
+-   JavaScript:
+    -   [Eloquent JavaScript](http://eloquentjavascript.net)
+    -   [You Don't Know JS: Up & Going](https://github.com/getify/You-Dont-Know-JS/tree/master/up%2520%2526%2520going)
+
 
 ## Further Reading
-
-
-[homebrew]: http://brew.sh
-[cask]: https://caskroom.github.io
-[atom]: http://atom.io
-[github]: http://github.com

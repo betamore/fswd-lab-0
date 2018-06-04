@@ -1,0 +1,85 @@
+#+OPTIONS: tex:nil toc:nil
+
+* Computer Setup
+
+** Initial Tool Setup
+
+1. Install [[http://brew.sh][Homebrew]]
+2. Install [[http://cashroom.github.io][Homebrew Cask]]
+3. Run ~brew update~ in the ~Terminal~ application.
+
+Homebrew should prompt you to install the Xcode Command Line Tools. You should be able to install them by running the command ~xcode-select --install~
+
+** Recommended Software
+
+1. Install [[https://code.visualstudio.com][Visual Studio Code]]: ~brew cask install visual-studio-code~
+
+   Other good text editors include:
+
+   * [[http://atom.io][Atom]]: ~brew cask install atom~
+   * [[https://www.sublimetext.com][Sublime Text]]: ~brew cask install sublime-text~
+   * [[http://brackets.io][Brackets]]: ~brew cask install brackets~
+
+2. Install [[https://github.com/creationix/nvm][nvm]]: ~brew install nvm~
+
+** Terminal and Shell Configuration
+
+The default ~Terminal~ configuration (specifically, the setup for the "shell" tool that runs inside the eindow) can be terse. Adding the following lines to a file named ~.bashrc~ in your home directory (sometimes you'll see it as ~$HOME~ or ~~~, it means ~/Users/<your username>/~) will help.
+
+#+BEGIN_SRC bash :tangle .bashrc :exports code
+# Look for programs to run in the normal spots as well as /usr/local/bin
+PATH="$PATH:/usr/local/bin"
+
+# Looks at the git info for the current directory
+function parse_git_info() {
+    BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+    if [ ! "${BRANCH}" == "" ]
+    then
+        GIT_USER=`git config user.email`
+        echo " [${GIT_USER} - ${BRANCH}]"
+    else
+        echo ""
+    fi
+}
+
+# Set the prompt to include directory and git information
+# Notice the usage of parse_git_info
+PS1='\e[33m\]\u@\h\e[m\] \e[34m\]\w\[\e[m\]\e[32m\]`parse_git_info`\e[m\]\n\$ '
+
+# Setup the nvm tool
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
+# Make the output of ls more distinctive
+export LSCOLORS=exfxcxdxbxegedabagacad
+
+# Tell the shell program to read files that contain instructions
+# for completing commands and arguments when you hit the TAB key
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+# Use atom for git operations, among other things
+export EDITOR="code -w"
+#+END_SRC
+
+This file is not automatically read by the shell program in ~Terminal~ (even though the ~.*rc~ filename template is a standard one), so you will also need to create/edit a file named ~.bash_profile~.
+
+#+BEGIN_SRC bash :tangle .bash_profile
+if [ -r ~/.bashrc ]; then
+   source ~/.bashrc
+fi
+#+END_SRC
+
+** Other Prep Steps
+
+1. Sign up for a [[http://github.com][GitHub]] account if you do not already have one
+
+* Links and Further Reading
+
+  * Development Tools:
+    * [[http://brew.sh][Homebrew]]
+    * [[https://code.visualstudio.com/docs][Visual Studio Code documentation]]
+    * [[https://code.visualstudio.com/docs/setup/mac][Visual Studio Code on macOS]]
+    * [[https://git-scm.com/book/en/v2][Pro Git]]
+  * JavaScript:
+    * [[http://eloquentjavascript.net][Eloquent JavaScript]]
+    * [[https://github.com/getify/You-Dont-Know-JS/tree/master/up%2520%2526%2520going][You Don't Know JS: Up & Going]]
