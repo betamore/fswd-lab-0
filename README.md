@@ -1,3 +1,8 @@
+**Purpose:** To prepare your laptop for running the tools we will use for class.
+
+**Goal:** By the end of the lab, you will be able to open a `Terminal` window, run a command in `Terminal`, and edit a text file.
+
+
 # Computer Setup
 
 
