@@ -86,6 +86,3 @@ fi
 -   JavaScript:
     -   [Eloquent JavaScript](http://eloquentjavascript.net)
     -   [You Don't Know JS: Up & Going](https://github.com/getify/You-Dont-Know-JS/tree/master/up%2520%2526%2520going)
-
-
-## Further Reading
